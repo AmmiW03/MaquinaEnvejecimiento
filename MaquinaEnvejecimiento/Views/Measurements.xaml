@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaquinaEnvejecimiento.Views.MeasurementsPage"
+             Title="Agregar mediciones">
+
+    <Grid Padding="20,3,20,5">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="0.2*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+
+        <!-- Espacio para los titulos -->
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" 
+                   Text="Agregar mediciones" FontSize="17" TextColor="Black"
+                   HorizontalOptions="Start" VerticalOptions="Center"/>
+
+            <Image Grid.Row="0"
+                   Source="perfil.png"
+                   HorizontalOptions="End" VerticalOptions="Center"/>
+
+        </Grid>
+
+        <!-- Linea -->
+        <Grid Grid.Row="1" BackgroundColor="Black"/>
+
+        <!-- Espacio para la informacion -->
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition  Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Row 0 -->
+            <Label Grid.Row="0" Grid.Column="0"
+                   Text="Nombre de la muestra" FontSize="14" TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Entry Grid.Row="0" Grid.Column="1" 
+                   HorizontalOptions="Center" VerticalOptions="Center"
+                   IsReadOnly="False" WidthRequest="90"/>
+
+            <!-- Row 1 -->
+            <Label Grid.Row="1" Grid.Column="0" 
+                   Text="Temperatura" FontSize="14" TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Entry Grid.Row="1" Grid.Column="1" 
+                   HorizontalOptions="Center" VerticalOptions="Center"
+                   IsReadOnly="False"  WidthRequest="90"/>
+
+            <!-- Row 2 -->
+            <Label Grid.Row="2" Grid.Column="0"
+                   Text="Humedad" FontSize="14" TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Entry Grid.Row="2" Grid.Column="1" 
+                   HorizontalOptions="Center" VerticalOptions="Center"
+                   IsReadOnly="True" WidthRequest="90"/>
+
+            <!-- Row 3 -->
+            <Label Grid.Row="3" Grid.Column="0" 
+                   Text="Tenacidad" FontSize="14"
+                   TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Entry Grid.Row="3" Grid.Column="1" 
+                   HorizontalOptions="Center" VerticalOptions="Center"
+                   IsReadOnly="False" WidthRequest="90"/>
+
+            <!-- Row 4 -->
+            <Label Grid.Row="4" Grid.Column="0" 
+                   Text="Ciclos" FontSize="14" TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Entry Grid.Row="4" Grid.Column="1" x:Name="Cicles"
+                   HorizontalOptions="Center" VerticalOptions="Center" 
+                   IsReadOnly="False" WidthRequest="90" Keyboard="Numeric" TextChanged="OnEntryTextChanged"/>
+
+            <!-- Row 5 -->
+            <Label Grid.Row="5" Grid.Column="0" 
+                   Text="Fecha inicio" FontSize="14" TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Label Grid.Row="5" Grid.Column="1" 
+                   Text="06/09/2023 12: 00: 00" FontSize="14"
+                    TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+            
+            <!-- Row 6 -->
+            <Label Grid.Row="6" Grid.Column="0" 
+                   Text="Fecha inicio" FontSize="14" TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Label Grid.Row="6" Grid.Column="1" 
+                   Text="Pendente de finalización" FontSize="14"
+                    TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+        </Grid>
+
+        <!-- Espacio para los botones -->
+        <Grid Grid.Row="3">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*" />
+                <ColumnDefinition  Width="*" />
+                <ColumnDefinition  Width="10*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" 
+                    Text="Explorar mediciones" FontSize="14" TextTransform="None"
+                    BackgroundColor="CornflowerBlue" TextColor="Black"
+                    CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+                    />
+
+            <Label Grid.Column="1" BackgroundColor="Transparent"/>
+
+            <Button Grid.Column="2" 
+                    WidthRequest="45"
+                    HeightRequest="45"
+                    CornerRadius="80"
+                    VerticalOptions="Center"
+                    Text="+" TextColor="Black" FontSize="Title"
+                    HorizontalOptions="Center"
+                    BackgroundColor="CornflowerBlue"
+                    />
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

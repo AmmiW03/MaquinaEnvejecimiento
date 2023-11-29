@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaquinaEnvejecimiento.Views.SignupPage"
+             Title="Registrarse">
+
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+      ColumnDefinitions="Auto,*,Auto"
+      Padding="15,0"
+      RowSpacing="7">
+
+        <!-- imagen principal -->
+        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+               Source="logos.png"
+               Margin="-15,-60,-15,15"
+               
+               HeightRequest="430"
+               VerticalOptions="Start"
+               Aspect="AspectFit"/>
+
+        <Entry Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+               Placeholder="Nombres" />
+
+        <Entry Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" 
+               Placeholder="Correo" />
+
+        <Entry Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" 
+                   Placeholder="Clave (Matricula/ISSEMYM)" />
+
+        <Entry Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+                   Placeholder="Contraseña"  IsPassword="true" />
+
+        <Entry Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+               Placeholder="Confirmar contraseña"  IsPassword="true" />
+
+        <!-- Boton de registro -->
+        <Button Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2 "
+                   VerticalOptions="End"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="#003da6"
+                   CornerRadius="60"
+                   Text="REGISTRARSE"
+                   FontAttributes="Bold"
+                   FontSize="17"
+                   Clicked="RegisterClicked"/>
+
+    </Grid>
+</ContentPage>

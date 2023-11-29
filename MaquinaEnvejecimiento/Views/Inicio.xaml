@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaquinaEnvejecimiento.Views.InicioPage"
+             Title="Inicio">
+
+    <Grid Padding="20,3,20,5">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="0.2*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+
+        <!-- Espacio para los titulos -->
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" 
+                   Text="Mediciones" FontSize="17" TextColor="Black"
+                   HorizontalOptions="Start" VerticalOptions="Center"/>
+
+            <Label Grid.Row="1"  
+                   Text="Muestra #1018-Acero" FontSize="15" TextColor="Black"
+                   HorizontalOptions="Start" VerticalOptions="Center"/>
+
+            <Image Grid.Row="1"
+                   Source="perfil.png"
+                   HorizontalOptions="End" VerticalOptions="Center"/>
+
+        </Grid>
+
+        <!-- Linea -->
+        <Grid Grid.Row="1" BackgroundColor="Black"/>
+
+        <!-- Espacio para la informacion -->
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition  Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0"
+                   Text="Mediciones" FontSize="14" TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Switch Grid.Row="0" Grid.Column="1" 
+                    HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Label Grid.Row="1" Grid.Column="0" 
+                   Text="Temperatura" FontSize="14" TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Entry Grid.Row="1" Grid.Column="1" 
+                   HorizontalOptions="Center" VerticalOptions="Center"
+                   IsReadOnly="True" WidthRequest="70"/>
+
+            <Label Grid.Row="2" Grid.Column="0"
+                   Text="Humedad" FontSize="14" TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Entry Grid.Row="2" Grid.Column="1" 
+                   HorizontalOptions="Center" VerticalOptions="Center"
+                   IsReadOnly="True" WidthRequest="70"/>
+
+            <Label Grid.Row="3" Grid.Column="0" 
+                   Text="UV" FontSize="14"
+                   TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Switch Grid.Row="3" Grid.Column="1" 
+                    HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Label Grid.Row="4" Grid.Column="0" 
+                   Text="Fecha inicio" FontSize="14" TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Label Grid.Row="4" Grid.Column="1" 
+                   Text="06/09/2023 12: 00: 00" FontSize="14"
+                    TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+        </Grid>
+
+        <!-- Espacio para los botones -->
+        <Grid Grid.Row="3">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*" />
+                <ColumnDefinition  Width="*" />
+                <ColumnDefinition  Width="10*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" 
+                    Text="Explorar mediciones" FontSize="14" TextTransform="None"
+                    BackgroundColor="CornflowerBlue" TextColor="Black"
+                    CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+                    Clicked="MeasurementsClicked"/>
+
+            <Label Grid.Column="1" BackgroundColor="Transparent"/>
+
+            <Button Grid.Column="2" 
+                    WidthRequest="45"
+                    HeightRequest="45"
+                    CornerRadius="80"
+                    VerticalOptions="Center"
+                    Text="+" TextColor="Black" FontSize="Title"
+                    HorizontalOptions="Center"
+                    BackgroundColor="CornflowerBlue"
+                    Clicked="AddMeasurementsClicked"/>
+
+        </Grid>
+
+    </Grid>
+    
+</ContentPage>
